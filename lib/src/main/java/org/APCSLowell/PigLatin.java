@@ -14,10 +14,9 @@ public class PigLatin {
         //precondition: sWord is a valid String of length greater than 0
         //postcondition: returns the pig latin equivalent of sWord
         if(findFirstVowel(sWord)!=-1){
-           return sWord.substring(i,sWord.length())+sWord.substring(0,i)+"ay";
+           return sWord.substring(findFirstVowel(sWord),sWord.length())+sWord.substring(0,findFirstVowel(sWord))+"ay";
         }else{
            return sWord + "ay";
         }
-        return null;
     }
 }
